@@ -1,0 +1,198 @@
+@import 'color';
+
+
+$containerWidth: 1500px;
+$heightContainer: 800px;
+$hide: 0;
+$show: 1;
+
+body {
+    margin: 0px;
+    background-color: $bodyColor;
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        color: $textColor1;
+        margin-left: -100px;
+        opacity: $hide;
+        animation-name: margLeft;
+        animation-delay: 5s;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+
+    }
+        p{
+            font-size: 40px;
+            text-align: center
+        }
+        .p1{
+            margin-left: -140px;
+        }
+        .p2{
+            margin-left: 70px;
+            margin-top: -50px;
+        }
+        .p3{
+            margin-left: 320px;
+            margin-top: -50px;
+        }
+}
+
+.background{
+    width: $containerWidth;
+    height: $heightContainer;
+    margin: auto;
+    transform: translateY(8%);
+}
+
+@keyframes appear {
+    from{
+        opacity: $hide;
+    }
+    to{
+        opacity: $show;
+    }
+}
+
+.column1{
+    width: $containerWidth - 1000;
+    height: $heightContainer;
+    float: left;
+    background-color: $columnColor1;
+    animation-name: appear;
+    animation-duration: 4s;
+}
+.column2{
+    width: $containerWidth - 1000;
+    height: $heightContainer;
+    float: left;
+    background-color: $columnColor2;
+    animation-name: appear;
+    animation-duration: 4s;
+}
+.column3{
+    width: $containerWidth - 1000;
+    height: $heightContainer;
+    float: left;
+    background-color: $columnColor3;
+    animation-name: appear;
+    animation-duration: 4s;
+}
+
+@keyframes margLeft {
+    from{
+        opacity: $hide;
+        transform: translateX(-500px)
+    }
+    to{
+        opacity: $show;
+        transform: translateX(0)
+    }
+}
+
+.quotaion{
+    width: $containerWidth - 1050;
+    height: 260px;
+    background-color: $textColor1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+    opacity: $hide;
+    animation-name: margLeft;
+    animation-delay: 3s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+
+    p{
+        text-align: center;
+        font-size: 21px;
+        padding: 50px;
+    }
+}
+
+.name{
+    width: 350px;
+    height: 30px;
+    background-color: $bgName;
+    margin-left: auto;
+    margin-right: auto;
+    color: $textColor1;
+    text-align: center;
+    font-size: 23px;
+    padding: 30px;
+    margin-top: -40px;
+    opacity: $hide;
+    animation-name: margLeft;
+    animation-delay: 5s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+
+}
+
+.image{
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    margin-left: -400px;
+    margin-top: 50px;
+}
+
+@keyframes margRight {
+    from{
+        opacity: $hide;
+        transform: translateX(500px)
+    }
+    to{
+        opacity: $show;
+        transform: translateY(0)
+    }
+}
+
+#history{
+    width: 90px;
+    height: 90px;
+    background-color: $historyBg;
+    margin-top: -475px;
+    margin-left: 320px;
+    color: $textColor1;
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+    opacity: $hide;
+    animation-name: margRight;
+    animation-delay: 7s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#composition{
+    width: 90px;
+    height: 90px;
+    background-color: $compositionBg;
+    margin-left: 320px;
+    color: $textColor1;
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+    opacity: $hide;
+    animation-name: margRight;
+    animation-delay: 8s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#theBestHits{
+    width: 90px;
+    height: 90px;
+    background-color: $theBestHitsBg;
+    margin-left: 320px;
+    color: $textColor1;
+    text-align: center;
+    font-size: 30px;
+    padding: 40px;
+    opacity: $hide;
+    animation-name: margRight;
+    animation-delay: 9s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
