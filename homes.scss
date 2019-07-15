@@ -12,7 +12,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     header {
-        color: $textColor1;
+        color: $Color1;
         margin-left: -100px;
         opacity: $hide;
         animation-name: margLeft;
@@ -38,10 +38,11 @@ body {
         }
 }
 
-.background{
+.container{
     width: $containerWidth;
     height: $heightContainer;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     transform: translateY(8%);
 }
 
@@ -54,29 +55,25 @@ body {
     }
 }
 
-.column1{
+@mixin columns {
     width: $containerWidth - 1000;
     height: $heightContainer;
     float: left;
-    background-color: $columnColor1;
     animation-name: appear;
-    animation-duration: 4s;
+    animation-duration: 3s;
+}
+
+.column1{
+    @include columns();
+    background-color: $columnColor1;
 }
 .column2{
-    width: $containerWidth - 1000;
-    height: $heightContainer;
-    float: left;
+    @include columns();
     background-color: $columnColor2;
-    animation-name: appear;
-    animation-duration: 4s;
 }
 .column3{
-    width: $containerWidth - 1000;
-    height: $heightContainer;
-    float: left;
+    @include columns();
     background-color: $columnColor3;
-    animation-name: appear;
-    animation-duration: 4s;
 }
 
 @keyframes margLeft {
@@ -93,7 +90,7 @@ body {
 .quotaion{
     width: $containerWidth - 1050;
     height: 260px;
-    background-color: $textColor1;
+    background-color: $Color1;
     margin-left: auto;
     margin-right: auto;
     margin-top: 300px;
@@ -116,7 +113,7 @@ body {
     background-color: $bgName;
     margin-left: auto;
     margin-right: auto;
-    color: $textColor1;
+    color: $Color1;
     text-align: center;
     font-size: 23px;
     padding: 30px;
@@ -148,51 +145,39 @@ body {
     }
 }
 
-#history{
+@mixin pages {
     width: 90px;
     height: 90px;
-    background-color: $historyBg;
-    margin-top: -475px;
     margin-left: 320px;
-    color: $textColor1;
+    color: $Color1;
     text-align: center;
     font-size: 30px;
     padding: 40px;
     opacity: $hide;
     animation-name: margRight;
-    animation-delay: 7s;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+}
+
+#history{
+    @include pages();
+    background-color: $historyBg;
+    margin-top: -475px;
+    animation-delay: 5s;
 }
 
 #composition{
-    width: 90px;
-    height: 90px;
+    @include pages();
     background-color: $compositionBg;
-    margin-left: 320px;
-    color: $textColor1;
-    text-align: center;
-    font-size: 30px;
-    padding: 40px;
-    opacity: $hide;
-    animation-name: margRight;
-    animation-delay: 8s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-delay: 6s;
 }
 
 #theBestHits{
-    width: 90px;
-    height: 90px;
+    @include pages();
     background-color: $theBestHitsBg;
-    margin-left: 320px;
-    color: $textColor1;
-    text-align: center;
-    font-size: 30px;
-    padding: 40px;
-    opacity: $hide;
-    animation-name: margRight;
-    animation-delay: 9s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+
+#NewTitle{
+    color: #313131;
 }

@@ -1,0 +1,109 @@
+@import 'color';
+
+@media screen and (max-width: 800px) {
+    body{
+        background-color: $Color1;
+    }
+
+    header{
+        p{
+            font-size: 0px;
+        }
+    }
+
+    .image{
+        width: 1500px;
+        height: 1500px;
+        margin-left: -1000px;
+        margin-top: 500px;
+    } 
+
+    .background{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .column1{
+        animation-duration: 3s;
+        height: 3400px;
+        margin-top: -60px;
+    }
+    .column2{
+        @extend .column1;
+    }
+    .column3{
+        @extend .column1;
+    }
+
+    .quotaion{
+        animation-delay: 3s;
+        animation-duration: 2s;
+        width: 1500px;
+        height: 800px;
+        margin-top: 2300px;
+        
+        p{
+            font-size: 65px;
+            padding: 100px;
+        }
+    }
+
+    .name{
+        width: 1000px;
+        height: 200px;
+        font-size: 75px;
+        margin-left: 50%;
+        margin-top: -100px;
+    }
+
+    $delayTime: 7s;
+
+    @mixin pages {
+        width: 420px;
+        height: 420px;
+        font-size: 80px; 
+    }
+
+    #history{
+        @include pages();
+        margin: -1000px;
+        margin-top: 1700px;
+        animation-delay: $delayTime + 1;
+    }
+
+    #composition{
+        @include pages();
+        margin-left: -500px;
+        margin-top: 500px;
+        animation-delay: $delayTime + 2;
+    }
+
+    #theBestHits{
+        @include pages();
+        margin-left: 0px;
+        margin-top: -500px;
+        animation-delay: $delayTime + 3;
+    }
+
+    //Element stworzony w javascript
+
+    @keyframes names {
+        0%{
+            color: $Color1;
+        }
+        100%{
+            color: $Color1;
+        }
+    }
+
+    #NewTitle{
+        animation-name: none;
+        font-size: 100px;
+        position: absolute;
+        margin-left: 550px;
+        text-align: center;
+        margin-top: -700px;
+        color: $Color1;
+        opacity: 1;
+    }
+}
